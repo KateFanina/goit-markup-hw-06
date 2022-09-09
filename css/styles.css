@@ -165,10 +165,15 @@ button {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.checkbox-btn:hover,
+.checkbox-btn:focus,
+.form-btn:hover,
+.form-btn:focus {
   background-color: #188ce8;
   color: var(--title-text-color);
 }
+
 
 .btn {
   padding: 10px 32px;
@@ -580,11 +585,7 @@ body .link {
   color: var(--title-text-color);
   outline: none;
 }
-.form-btn:hover,
-.form-btn:focus {
-  background-color: #188ce8;
-  color: var(--title-text-color);
-}
+
 .subscribe {
   display: flex;
   margin-top: 20px;
@@ -691,11 +692,11 @@ body .link {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background-color: var(--title-text-color);
+   background-color: var(--title-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
+  }
 .modal-form {
   display: block;
   padding: 40px;
@@ -718,7 +719,7 @@ body .link {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: color var(--timing-duration);
+  transition: border-color var(--timing-duration), fill var(--accent-color);
 }
 
 .modal-input:focus,
@@ -759,6 +760,7 @@ body .link {
   margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color var(--timing-duration);
 }
 .comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -770,18 +772,25 @@ body .link {
 }
 .checkbox-text {
   color: var(--title-color);
+  display: flex;
+  align-items: center;
 }
 .check-icon {
   cursor: pointer;
+  border: 2px solid var(--accent-color);
+  border-radius: 3px;
+  margin-right: 8px;
 }
 
 .checkbox-input {
+  position: absolute;
   appearance: none;
 }
+
 .checkbox-input:checked + .check-icon {
-  display: none;
+  background-color: var(--accent-color);
 }
-.checkbox-input:checked + .check-icon + .check-own-icon {
+.checkbox-input:checked + .check-icon .check-own-icon {
   display: block;
 }
 
@@ -804,7 +813,8 @@ body .link {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
-  transition: background-color var(--timing-duration);
+ transition: background-color var(--timing-duration), color var(--timing-duration),
+    box-shadow var(--timing-duration);;
 }
 
 .modal-close {
