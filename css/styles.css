@@ -322,7 +322,7 @@ img {
 
 .flex-link:hover,
 .flex-link:focus {
-    transform: translateY(0%);
+  transform: translateY(0%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -550,6 +550,68 @@ body .link {
 .team-icon {
   display: flex;
 }
+.footer-sign {
+  margin-left: auto;
+}
+
+.form-sign-up {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.footer-input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-input:focus {
+  border-color: var(--accent-color);
+  color: var(--title-text-color);
+  outline: none;
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: #188ce8;
+  color: var(--title-text-color);
+}
+.subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-btn {
+  padding: 10px 28px;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  transition: background-color var(--timing-duration);
+}
+.form-icon {
+  margin-left: 10px;
+}
 
 /* Портфолио */
 .filter {
@@ -606,7 +668,7 @@ body .link {
   line-height: 1.88;
   color: var(--title-color);
 }
-/* Модальное окно и backdrop */
+/*=========Модальное окно и backdrop=============== */
 
 .backdrop {
   position: fixed;
@@ -633,6 +695,116 @@ body .link {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.modal-form {
+  display: block;
+  padding: 40px;
+}
+.modal-icons {
+  position: relative;
+  margin-top: 4px;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: color var(--timing-duration);
+}
+
+.modal-input:focus,
+.comment:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  color: var(--logo-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0;
+  color: var(--comon-color);
+}
+
+.modal-name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+}
+.comment {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.checkbox {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.checkbox-text {
+  color: var(--title-color);
+}
+.check-icon {
+  cursor: pointer;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+.checkbox-input:checked + .check-icon {
+  display: none;
+}
+.checkbox-input:checked + .check-icon + .check-own-icon {
+  display: block;
+}
+
+.checkbox-btn {
+  padding: 10px 52px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  transition: background-color var(--timing-duration);
 }
 
 .modal-close {
